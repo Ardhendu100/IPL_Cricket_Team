@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player's Dashboard</title>
+    <link rel="stylesheet" href="../CSS/player_details.css">
+</head>
+<body>
+  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Player's Dashboard</button>
+
+  <div id="id01" class="modal">
+    
+    <form class="modal-content animate">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <img src="" alt="Avatar" class="avatar" id="player_img">
+      </div>
+  
+      <div class="container">
+          <div class="dashboard">
+              <p style="font-size:22px;"><b>Full Name:</b><span id="full_name"></span></p>
+              <p style="font-size:22px;"><b>Team Name:</b><span id="team_name"></span></p>
+              <p style="font-size:22px;"><b>Price:</b><span id="price"></span></p>
+              <p style="font-size:22px;"><b>Playing Status:</b><span id="playing_status"></span></p>
+              <p style="font-size:22px;"><b>Role:</b><span id="role"></span></p>
+              </div>
+      </div>
+    </form>
+  </div>
+  <script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    </script>
+<script src="../../JS/player_details.js"></script>
+</body>
+</html>
